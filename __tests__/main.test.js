@@ -2,7 +2,7 @@ import {newName, gameMaster} from './../src/CharacterCreation.js';
 
 describe('player', () => {
 
-  test('should correctly set player name and initial character values.', () => {
+  test('should correctly set player name and initial values for strength, coins, level, name, and health.', () => {
     const newPlayer = newName("Dracobian");
     const newPlayerObj = gameMaster(newPlayer);
     expect(newPlayerObj.strength).toEqual(30);
