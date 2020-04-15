@@ -1,5 +1,5 @@
-export const storeState = () => {
-  let currentState = { }; 
+export const storeState = (initialCharacterValues) => {
+  let currentState = initialCharacterValues; 
   return (stateChangeFunction) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
@@ -13,23 +13,26 @@ const changeState = (prop) => {
   return (value) => {
     return (state) => ({
       ...state, 
-      [prop] : (state[prop] || 0) + value
+      [prop] : (state[prop] || "") + value
     });
   };
 };
 
-const initialCharacterValues = {name: "", health: 0, strength: 0, level: 0, coins: 0};
-const characterMaster = storeState(initialCharacterValues); 
-const newPlayer = changeState("name")("health")("strength")("level")("coins");
+const initialCharacterValues = {name:"", health: 100, strength: 30, level: 1, coins: 100};
 
-const player1 = newPlayer("Dracobian")(100)(10)(1)(150);
-export const player1Obj = characterMaster(player1);
+export const newName = changeState("name");
+export const getHealthy = changeState("health");
+export const getStrong = changeState("strength");
+export const upgrade = changeState("level");
+export const getRich = changeState("coins");
 
-const player2 = newPlayer("Mr. Miyagi")(100)(80)(1)(25);
-export const player2Obj = characterMaster(player2);
+// const bigHit = getHealthy(-10);
 
-const player3 = newPlayer("Todders")(75)(30)(1)(150);
-export const player3Obj = characterMaster(player3);
+export const player1 = storeState(initialCharacterValues);
+export const player2 = storeState(initialCharacterValues);
+export const player3 = storeState(initialCharacterValues);
+export const player4 = storeState(initialCharacterValues);
 
-const player4 = newPlayer("Epicodbro")(100)(50)(1)(150);
-export const player4Obj = characterMaster(player4);
+
+console.log(player1Obj);
+
