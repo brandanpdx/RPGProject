@@ -1,13 +1,13 @@
-# _Power Plant_
+# _Sauce Quest_
 
 #### _RPG Game 2 Day Project_ | April 15th. 2020_
 
-#### By _** Brandan Sarath, Benjamin Thom, Drake Wilcox  **_
+#### By _** Brandan Sayrath, Benjamin Thom, Todd Walraven, Drake Wilcox **_
 
 
 ## Description
 
-This is an inclass assignment using functional programming and testing in JavaScript.
+This is an in-class assignment using functional programming and testing in JavaScript.
 
 ## Setup/Installation Requirements
 
