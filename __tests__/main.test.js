@@ -1,4 +1,4 @@
-import {newCharacterName, characterMaster, bossMaster, newBossName, blueSauce, storeState, initialCharacterValues, changeState, initialSauceBossValues, redSauce} from './../src/SauceQuest.js';
+import {newCharacterName, characterMaster, bossMaster, newBossName, blueSauce, storeState, initialCharacterValues, initialSauceBossValues, redSauce, ladleSmash, sleepySauce} from './../src/SauceQuest.js';
 
 describe('player', () => {
 
@@ -31,18 +31,16 @@ describe('boss' , () => {
     expect(newBossObj.name).toEqual("Sir. Racha");
     expect(newBossObj.health).toEqual(100);
     expect(newBossObj.damage).toEqual(0);
-    expect(newBossObj.special).toEqual(0);
+    expect(newBossObj.specialTrick).toEqual(10);
   })
-//   test('should decrease the health of a boss by 10', () => {
-//     const newBoss = storeState(initialSauceBossValues);
-//     const unhealthyBoss = newBoss(ladleSmash);
-//     expect(unhealthyBoss.health).toEqual(90);
-//   })
-//   test('should increase the special of a boss by 30', () => {
-//     const newBoss = storeState(initialSauceBossValues); 
-//     const bossSepcial = newBoss(sleepySauce);
-//     expect(bossSepcial.special).toEqual(30);
-//   })
-
-
+  test('should decrease the health of a boss by 10', () => {
+    const newBoss = storeState(initialSauceBossValues);
+    const unhealthyBoss = newBoss(ladleSmash);
+    expect(unhealthyBoss.health).toEqual(90);
+  })
+  test('should increase the special of a boss by 30', () => {
+    const newBoss = storeState(initialSauceBossValues); 
+    const bossSpecial = newBoss(sleepySauce);
+    expect(bossSpecial.specialTrick).toEqual(40);
+  })
 })
