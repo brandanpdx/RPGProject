@@ -31,7 +31,6 @@ Things to do today:
   - Potions that increase Health. 
   - 
 
-
 Co-authored-by: Brandan Sayarath <brandan@brandan.tech>
 Co-authored-by: Todd Walraven <cod4247@yahoo.com>
 Co-authored-by: Benjamin Thom <jaminthom@gmail.com>"
