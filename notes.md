@@ -14,16 +14,22 @@ Battle System:
   Weapon Properties: 
     - Damage: 1-10
 
-    SauceBoss: 
-      - Name: ""
-      - Health: 1-100
-      - Damage: 1-10
+  Boss Properties: 
+    - Name: ""
+    - Health: 1-100
+    - Damage: 1-10
 
 Inventory: 
   Item Properties: 
-    Type: ""
-    Value: +int
-    Price: 
+    - Type: ""
+    - Value: +int
+    - Price: 
+
+
+Things to do today: 
+  - Properties for Sauce Boss 
+  - Potions that increase Health. 
+  - 
 
 
 Co-authored-by: Brandan Sayarath <brandan@brandan.tech>
